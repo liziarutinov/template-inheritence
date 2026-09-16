@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block heading %}Min webbplats{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    
+    <nav>
+        <a href="{{ url_for('index') }}">Hem</a>
+        <a href="{{ url_for('about') }}">Om oss</a>
+        <a href="{{ url_for('contact') }}">Kontakt</a>
+        <a href="{{ url_for('news') }}">Nyheter</a>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Min webbplats</p>
+    </footer>
+
+    {% block scripts %}
+    {% endblock %}
 </body>
 </html>
