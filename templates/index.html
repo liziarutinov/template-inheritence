@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<!doctype html>
+{% extends "base.html" %}
+
+{% block heading %}
+Välkommen
+{% endblock %}
+
+{% block content %}
+<h1>Välkommen!</h1>
+
+<p>
+    Välkommen till min webbplats. Här kan du läsa mer om oss,
+    hitta våra kontaktuppgifter och se de senaste nyheterna.
+</p>
+{% endblock %}
